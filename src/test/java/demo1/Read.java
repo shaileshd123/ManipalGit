@@ -50,7 +50,7 @@ package demo1;
 				driver.findElement(By.xpath("//input[@name = 'email']")).sendKeys(cell.getStringCellValue());
 
 				// import the data for the password 
-				Thread.sleep(2000);
+				
 
 				cell = sheet.getRow(i).getCell(1);
 				driver.findElement(By.xpath("//input[@id = 'pass']")).clear();
