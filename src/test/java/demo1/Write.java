@@ -36,9 +36,9 @@ import java.io.IOException;
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.MILLISECONDS);
 			// Import excel sheet
-			File src = new File("C:\\Users\\Admin\\eclipse-workspace\\DATADRIVEN\\TestData.xlsx");
+			//File src = new File("C:\\Users\\Admin\\eclipse-workspace\\DATADRIVEN\\TestData.xlsx");
 			// load the file
-			FileInputStream fis = new FileInputStream(src);
+			FileInputStream fis = new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\DATADRIVEN\\TestData.xlsx");
 			// load the work book
 
 			workbook = new XSSFWorkbook(fis);
@@ -60,7 +60,7 @@ import java.io.IOException;
 				String title = driver.getTitle();
 				System.out.println(title);
 				
-				FileOutputStream fos = new FileOutputStream(src);
+				FileOutputStream fos = new FileOutputStream("C:\\Users\\Admin\\eclipse-workspace\\DATADRIVEN\\TestData.xlsx");
 				
 				sheet.getRow(i).createCell(2).setCellValue(title);
 				
